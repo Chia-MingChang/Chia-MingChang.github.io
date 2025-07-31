@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Chocolate+Classical+Sans&family=Fleur+De+Leah&family=LXGW+WenKai+Mono+TC&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body{
+    font-family: Arial, 'Noto Serif TC', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 0px;
+    background-color: #156b13;
+}
+.nav-link{
+    color: #fff !important;
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+.dropdown-item{
+    color: #337ab7 !important;
+    font-size: 1.2vw;
+}
+.dropdown .dropdown-item:hover,
+.dropdown .dropdown-item:focus{
+    color: #fff !important;
+    background-color: #337ab7 !important;
+}
+#content{
+    margin-top: 10px;
+}
+.row .col-md-2 .sidebar .accordion-button {
+  border: 2px solid #dfdfdf;
+  background-color: #f7f7f7;
+}
+
+.sidebar {
+  padding: 5px;
+}
+
+.accordion-button {
+  font-size: 1.5vw;
+}
+.accordion-body table td:hover{
+    background-color: antiquewhite;
+}
+.accordion-body{
+    padding: 0px;
+}
+.table{
+    margin-bottom: 0px;
+}
+.table td{
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 2rem;
+    font-size: 0.8vw;
+}
+#aboutme{
+    background-color: #31384a;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#last-data{
+    height: 100px;
+    background-color: #b4b4b4;
+    padding-top: 10px;
+}
+.col-md-10 {
+    padding-bottom: 20px;
+
+}
+
+/* 新增 carousel 相關樣式 */
+#main-carousel-wrapper {
+    width: 100vw;
+    /* height: 100vh;  <-- 這一行請註解或刪除！ */
+    background: #fff;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.carousel-item > video,
+.carousel-item > img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+}
+body.show-navbar #main-carousel-wrapper {
+    display: none !important;
+}
+
+
+.navbar.fixed-top.show-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 側邊欄初始隱藏 */
+.sidebar-col {
+    display: none;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    /* 不要有 height: 100vh; 或 overflow: hidden; */
+}

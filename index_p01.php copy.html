@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Back2Nature</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="website_p01.css">
+    <style>
+        /* 初始隱藏側邊欄 */
+        .sidebar-col {
+            display: none;
+        }
+
+        /* 初始隱藏頂部導航欄，並添加過渡效果 */
+
+        /* 當捲動到指定位置時，添加此 class 來顯示導航欄 */
+        .navbar.fixed-top.show-nav {
+            opacity: 1;
+            /* 完全顯示 */
+            visibility: visible;
+            /* 可見 */
+        }
+
+        /* 確保 carousel item 的高度正確 */
+        #main-carousel-wrapper,
+        #carouselExampleCaptions,
+        .carousel-inner,
+        .carousel-item {
+            height: 100vh;
+            /* 設定為視窗的完整高度 */
+        }
+
+        .carousel-item>video,
+        .carousel-item>img {
+            object-fit: cover;
+            width: 100%;
+            /* 設置為100%父容器寬度 */
+            height: 100%;
+            /* 設置為100%父容器高度 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="col-md-10">
+        <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <a href="#">
+                        <video src="./images/八仙山.mp4" class="d-block w-100 h-100 object-fit-cover" autoplay muted loop
+                            playsinline></video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>八仙山空拍</h5>
+                            <p>活動期間全站購物單日累計消費滿額可參加抽獎活動，活動期間僅需登記一次，部分商品不適用，詳見說明。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item h-100">
+                    <a href="#">
+                        <video src="./images/馬崙山.mp4" class="d-block w-100 h-100 object-fit-cover" autoplay muted loop
+                            playsinline></video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>馬崙山</h5>
+                            <p>馬崙山，標高2305公尺，設有三等三角點6595號，為白姑大山向西延伸之中級山，谷關七雄中排行老二，可選擇由八壯士支線或斯可巴步道起登，因隨著八仙山林場開發完畢，馬崙山就被稱為新山林場，沿途有古早木炭窯，新山國小遺址等歷史遺跡，馬崙山步道以優美的二葉松著稱，滿地松針地毯相當好走，更有一棵遠近馳名的馬崙山名樹，其姿態優雅，型態美麗，令人目不轉睛被其吸引，彷彿馬崙山中的靈魂
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item h-100">
+                    <a href="#">
+                        <video src="./images/【扇子瀑布】溯溪.mp4" class="d-block w-100 h-100 object-fit-cover" autoplay muted
+                            loop playsinline></video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>清水溪溯溪</h5>
+                            <p>【扇子瀑布】
+                                清水溪清透見底，必去溯溪路線激推Top10!!好熱啊～好想整個夏天都泡在冰涼的溪水裡，就來傳說中很美的扇子瀑布玩水囉！金剛溪楓樹瀑布（扇子瀑布）扇子瀑布位於南澳北溪的一條支流清水溪！
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一張</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一張</span>
+            </button>
+        </div>
+    </div>
+    <section id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="#"><img src="images/logo_99x99.jpg" class="img-fluid" alt="logo_Back2Nature"
+                    style="border-radius: 15px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            男裝
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">外套/T-shirt</a>
+                            <a class="dropdown-item" href="#">外套</a>
+                            <a class="dropdown-item" href="#">POLO衫/襯衫</a>
+                            <a class="dropdown-item" href="#">長褲/短褲</a>
+                            <a class="dropdown-item" href="#">背心</a>
+                            <a class="dropdown-item" href="#">內著</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            女裝
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">外套/T-shirt</a>
+                            <a class="dropdown-item" href="#">外套</a>
+                            <a class="dropdown-item" href="#">POLO衫/襯衫</a>
+                            <a class="dropdown-item" href="#">長褲/短褲</a>
+                            <a class="dropdown-item" href="#">背心</a>
+                            <a class="dropdown-item" href="#">內著</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            帽子/包款/配件
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">包款</a>
+                            <a class="dropdown-item" href="#">手套/袖套</a>
+                            <a class="dropdown-item" href="#">帽子/頭巾/圍巾</a>
+                            <a class="dropdown-item" href="#">鞋款/襪子</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">最新活動</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">查訂單</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">折價券</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            會員權益
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">會員權益</a>
+                            <a class="dropdown-item" href="#">新朋友【立馬賺購物金】</a>
+                            <a class="dropdown-item" href="#">供應商報價服務</a>
+                            <a class="dropdown-item" href="#">加盟專區</a>
+                            <a class="dropdown-item" href="#">投資人專區</a>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <img src="./images/member.png" alt="member" style="width: 35px; height: 35px;">
+                        </a>
+                    </li>
+
+                    <li><a class="nav-link" href="#">🛒</a></li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="搜尋飲品" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">🔍</button>
+                        <!-- <svg data-v-4f8185de-s="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="6" r="5" stroke="currentColor" stroke-width="2"></circle><path d="M17.607 22.9957H6.393C5.54025 23.04 4.70467 22.7442 4.06888 22.1729C3.43309 21.6017 3.0488 20.8015 3 19.9471V19.1174C3 14.6077 7.032 11 12 11C16.968 11 21 14.6077 21 19.1174V19.9471C20.9512 20.8015 20.5669 21.6017 19.9311 22.1729C19.2953 22.7442 18.4598 23.04 17.607 22.9957V22.9957Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path></svg> -->
+                    </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 sidebar-col">
+                    <div class="sidebar">
+                        <form name="search" id="search" action="get">
+                            <div class="input-group">
+                                <input type="text" name="search_name" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="fas fa-search fa-lg"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-fire fa-lg fa-fw"></i>彩妝專區
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="#"><em class="fas fa-edit"></em>隔離/防曬/飾底乳</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#"><em class="fas fa-edit"></em>BB霜/CC霜</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#"><em class="fas fa-edit"></em>粉餅(蕊)/蜜粉/蜜粉/海綿</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#"><em class="fas fa-edit"></em>遮瑕/毛孔/打亮</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 main-content-col">
+            <hr>
+            <div class="row text-center">
+                <div class="card col-md-3">
+                    <a href="#">
+                        <img class="card-img-top" src="./product_img/hilltop_logo.png" alt="card-image-top"
+                            alt="HILTOP山頂鳥"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">HILTOP山頂鳥</h5>
+                        <p class="card-text">台灣登山用品自有品牌，切合不同天氣環境的高素質的機能服飾、產品，兼具戶外運動與都會休閒生活需求，從郊外到城市，從細節到品質</p>
+                        <p class="card-text"></p>
+                        <!-- <a href="#" class="btn btn-primary">更多資訊</a>
+                        <a href="#" class="btn btn-success">放購物車</a> -->
+                    </div>
+                </div>
+                <div class="card col-md-3">
+                    <a href="#">
+                        <img class="card-img-top" src="./product_img/歐都那LOGO.png" alt="card-image-top"
+                            alt="ATUNAS歐都納"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">ATUNAS歐都納</h5>
+                        <p class="card-text">
+                            專注設計適合台灣環境的戶外裝備品牌，自1975年創立以來，不斷開發與代理專業機能服飾、戶外登山、露營、休閒旅遊、水上用品，從頂級GORE-TEX、排汗、透氣、防水、防風、刷毛保暖服。
+                        </p>
+                        <p class="card-text"></p>
+                        <!-- <a href="#" class="btn btn-primary">更多資訊</a>
+                        <a href="#" class="btn btn-success">放購物車</a> -->
+                    </div>
+                </div>
+                <div class="card col-md-3">
+                    <a href="#">
+                        <img class="card-img-top" src="./product_img/DEAUTER_LOGO.png" alt="card-image-top"
+                            alt="DEAUTER"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">DEAUTER</h5>
+                        <p class="card-text">德國戶外背包品牌</p>
+                        <p class="card-text">NT690</p>
+                        <!-- <a href="#" class="btn btn-primary">更多資訊</a>
+                        <a href="#" class="btn btn-success">放購物車</a> -->
+                    </div>
+
+                </div>
+                <div class="card col-md-3">
+                    <a href="#">
+                        <img class="card-img-top" src="./product_img/KOMPERDELL_Logo.png" alt="KOMPERDELL">
+                        <div class="card-body">
+                    </a>
+                    <h5 class="card-title">KOMPERDELL <alt="KOMPERDELL">
+                    </h5>
+                    <p class="card-text">奧地利製頂夫登山杖</p>
+                    <p class="card-text"></p>
+                    <!-- <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a> -->
+                </div>
+
+            </div>
+            <div class="card col-md-3">
+                <a href="#">
+                    <img class="card-img-top" src="./product_img/Kayland_Logo.webp" alt="KAYLAND"></a>
+                <div class="card-body">
+                    <h5 class="card-title">KAYLAND</h5>
+                    <p class="card-text">義大利專業戶外鞋</p>
+                    <!-- <p class="card-text">NT1560</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a> -->
+                </div>
+
+            </div>
+            <div class="card col-md-3">
+                <a href="#">
+                    <img class="card-img-top" src="./product_img/arc-teryx.svg" alt="ARC'TERYX始祖鳥"></a>
+                <div class="card-body">
+                    <h5 class="card-title">ARC'TERYX始祖鳥</h5>
+                    <p class="card-text">ARC'TERYX始祖鳥是國內或出國旅遊必備首選，陪你飛向戶外。不管你是登山入門，還是時尚穿搭達人，俐落的機能型設計。</p>
+                    <!-- <p class="card-text">NT119</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a> -->
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <a href="#">
+                    <img class="card-img-top" src="./product_img/長毛象logo.png" alt="MAMMUT長毛象"></a>
+                <div class="card-body">
+                    <h5 class="card-title">MAMMUT長毛象</h5>
+                    <p class="card-text">瑞士繩索工藝，世界頂尖戶外品牌，以獨特品牌技術和專業服飾裝備，與山岳愛好者一同跨越侷限</p>
+                    <!-- <p class="card-text">NT369</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a> -->
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <a href="#">
+                    <img class="card-img-top" src="./product_img/montbell_logo.jpg" alt="Montbell"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Montbell</h5>
+                    <p class="card-text">日本的Montbell以高品質、輕量化的設計和對環境保護的戶外用品而聞名。 Montbell
+                        從1975年至今，產品涵蓋服裝、帳篷、睡袋、背包等，並積極推廣戶外活動和生態旅遊</p>
+                    <!-- <p class="card-text">NT1680</p> -->
+                    <!-- <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a> -->
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <img class="card-img-top" src="./product_img/pic0301.jpg" alt="card-image-top" alt="EVE'S 魔術性感美唇膏">
+                <div class="card-body">
+                    <h5 class="card-title">EVE'S 魔術性感美唇膏</h5>
+                    <p class="card-text">魔術性感美唇膏，不沾杯超持久唇色，想不到的魔術效果持續久久。</p>
+                    <p class="card-text">NT580</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a>
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <img class="card-img-top" src="./product_img/pic0303.jpg" alt="card-image-top" alt="森下仁丹整晚貼眼膜">
+                <div class="card-body">
+                    <h5 class="card-title">森下仁丹整晚貼眼膜</h5>
+                    <p class="card-text">日本森下仁丹整晚貼眼膜 5對/盒，長效整晚貼，慢速釋放保濕因子。</p>
+                    <p class="card-text">NT300</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a>
+                </div>
+            </div>
+            <div class="card col-md-3">
+                <img class="card-img-top" src="./product_img/pic0304.jpg" alt="card-image-top" alt="【美爽爽】泡泡染">
+                <div class="card-body">
+                    <h5 class="card-title">【美爽爽】泡泡染</h5>
+                    <p class="card-text">【美爽爽】泡泡染BUBBLE COLOR系列，任意顏色，買五送二。</p>
+                    <p class="card-text">NT3250</p>
+                    <a href="#" class="btn btn-primary">更多資訊</a>
+                    <a href="#" class="btn btn-success">放購物車</a>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <hr>
+    <hr>
+    <section id="scontent">
+        <div class="container-fluid"></div>
+        <div id="aboutme" class="row text-center">
+            <div class="col-md-2"><img src="images/Qrcode02.png" alt="QRCODE" class="img-fluid mx-auto"></div>
+            <div class="col-md-2"><i class="fas  fa-thumbs-up fa-5x"></i>
+                <h3>關於我們</h3>
+                關於我們<br>
+                企業官網<br>
+                招商專區<br>
+                人才招募<br>
+            </div>
+            <div class="col-md-2"><i class="fas fa-truck fa-5x"></i>
+                <h3>特色服務</h3>
+                特色服務<br>
+                大宗採購方案<br>
+                直配大陸<br>
+            </div>
+            <div class="col-md-2"><i class="fas fa-users fa-5x"></i>
+                <h3>客戶服務</h3>
+                客戶服務<br>
+                訂單/配送進度查詢<br>
+                取消訂單/退貨<br>
+                更改配送地址<br>
+                追蹤清單<br>
+                12H速達服務<br>
+                折價券說明<br>
+            </div>
+            <div class="col-md-2"><i class="fas fa-comments-dollar fa-5x"></i>
+                <h3>好康大放送</h3>
+                好康大放送<br>
+                新會員禮包<br>
+                活動得獎名單<br>
+            </div>
+            <div class="col-md-2"><i class="fas fa-question fa-5x"></i>
+                <h3>FAQ 常見問題</h3>
+                FAQ 常見問題<br>
+                系統使用問題<br>
+                產品問題資詢<br>
+                大宗採購問題<br>
+                聯絡我們<br>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container-fluid">
+            <div id="last-data" class="row text-center">
+                <div class="col-md-12">
+                    <h6>中彰投分署科技股份有限公司 40767台中市西屯區工業區一路100號 電話：04-23592181 免付費電話：0800-777888</h6>
+                    <h6>企業通過ISO/IEC27001認證，食品業者登錄字號：A-127360000-00000-0</h6>
+                    <h6>版權所有 copyright © 2017 WDA.com Inc. All Rights Reserved.</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+<iframe width="0" height="0"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&loop=1&playlist=dQw4w9WgXcQ&mute=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+    style="position: absolute; left: -9999px; top: -9999px;"></iframe>
+
+</html>
